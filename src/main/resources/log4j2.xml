@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Log4j 2.x config -->
+<Configuration status="OFF">
+
+    <!-- appenders -->
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout charset="UTF-8">
+                <pattern>%d %-5p [%C{1}#%L] [%t] %m%n</pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+
+    <!-- loggers -->
+    <Loggers>
+        <root>
+            <appender-ref ref="Console"/>
+        </root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "com.hyf.jraft.counter.rpc";
+option java_multiple_files = true;
+
+message GetValueRequest {
+}
+
+message IncrementAndGetRequest {
+  int64 count = 1;
+}
+
+message ValueResponse {
+  bool success = 1;
+  int32 code = 2;
+  string redirect = 3;
+  string errMsg = 4;
+  int64 count = 5;
+}
+
+
+// src\main>protoc -I proto/ --java_out=java/ counter.proto
